@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget
+    xmlns="http://www.w3.org/ns/widgets"
+    xmlns:cdv="http://cordova.apache.org/ns/1.0"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id="com.lectora.luc2015"
+    version="1.0.3"
+    >
+
+    <name>LUC2015</name>
+    <description>
+        Lectora User Conference 2015 Official App
+    </description>
+    <author email="hello@branchtrack.com" href="https://www.branchtrack.com">
+        BranchTrack.com
+    </author>
+    <content src="agenda_agenda_apr_29.html" />
+    <access origin="tel:*" launch-external="yes" />
+    <access origin="geo:*" launch-external="yes" />
+    <access origin="http://*" launch-external="yes" />
+    <access origin="https://*" launch-external="yes" />
+    <access origin="*" />
+
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.statusbar" />
+    <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+
+<!--cordova preferences-->
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="Orientation" value="portrait" />
+
+    <preference name="StatusBarOverlaysWebView" value="false" /> <!-- not supported in PGB, so also implemented via JS-->
+    <preference name="StatusBarBackgroundColor" value="#434244" /> <!-- not supported in PGB, so also implemented via JS-->
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="4000" />
+
+<!--phonegap build preferences, same as above but different syntax-->
+    <preference name="orientation" value="portrait" />
+    <preference name="ios-statusbarstyle" value="lightcontent" />
+    <preference name="splash-screen-duration" value="4000" />
+
+<!-- general all-purpose icon definition -->
+    <icon src="res/icon/ios/iTunesArtwork@2x.png" />
+<!-- IOS icons in Cordova (inside <platform> tags) & Phonegap Build markup  -->
+    <platform name="ios">
+              <icon src="res/icon/ios/icon-60@3x.png"        width="180" height="180"/>
+              <icon src="res/icon/ios/icon-60@2x.png"        width="120" height="120"/>
+              <icon src="res/icon/ios/icon-60.png"           width="60" height="60" />
+              <icon src="res/icon/ios/icon-76@2x.png"        width="152" height="152" />
+              <icon src="res/icon/ios/icon-76.png"           width="76" height="76" />
+              <icon src="res/icon/ios/icon-72@2x.png"        width="144" height="144" />
+              <icon src="res/icon/ios/icon-72.png"           width="72" height="72" />
+              <icon src="res/icon/ios/icon-Small-40@2x.png"  width="80" height="80" />
+              <icon src="res/icon/ios/icon-Small-40.png"     width="40" height="40" />
+              <icon src="res/icon/ios/icon-Small-50.png"     width="50" height="50" />
+              <icon src="res/icon/ios/icon-Small-50@2x.png"  width="100" height="100" />
+              <icon src="res/icon/ios/icon-Small.png"        width="29" height="29" />
+              <icon src="res/icon/ios/icon-Small@2x.png"     width="58" height="58" />
+              <icon src="res/icon/ios/icon.png"              width="57" height="57" />
+              <icon src="res/icon/ios/icon@2x.png"           width="114" height="114" />
+    </platform>
+              <icon src="res/icon/ios/icon-60@3x.png"        width="180" height="180" gap:platform="ios"/>
+              <icon src="res/icon/ios/icon-60@2x.png"        width="120" height="120" gap:platform="ios"/>
+              <icon src="res/icon/ios/icon-60.png"           width="60" height="60" gap:platform="ios"/>
+              <icon src="res/icon/ios/icon-76@2x.png"        width="152" height="152" gap:platform="ios"/>
+              <icon src="res/icon/ios/icon-76.png"           width="76" height="76" gap:platform="ios"/>
+              <icon src="res/icon/ios/icon-72@2x.png"        width="144" height="144" gap:platform="ios"/>
+              <icon src="res/icon/ios/icon-72.png"           width="72" height="72" gap:platform="ios"/>
+              <icon src="res/icon/ios/icon-Small-40@2x.png"  width="80" height="80" gap:platform="ios"/>
+              <icon src="res/icon/ios/icon-Small-40.png"     width="40" height="40" gap:platform="ios"/>
+              <icon src="res/icon/ios/icon-Small-50.png"     width="50" height="50" gap:platform="ios"/>
+              <icon src="res/icon/ios/icon-Small-50@2x.png"  width="100" height="100" gap:platform="ios"/>
+              <icon src="res/icon/ios/icon-Small.png"        width="29" height="29" gap:platform="ios"/>
+              <icon src="res/icon/ios/icon-Small@2x.png"     width="58" height="58" gap:platform="ios"/>
+              <icon src="res/icon/ios/icon.png"              width="57" height="57" gap:platform="ios"/>
+              <icon src="res/icon/ios/icon@2x.png"           width="114" height="114" gap:platform="ios"/>
+<!-- Android icons in Cordova (inside <platform> tags) & Phonegap Build markup  -->
+    <platform name="android">
+          <icon src="res/icon/android/icon-36-ldpi.png"  density="ldpi"  />
+          <icon src="res/icon/android/icon-48-mdpi.png"  density="mdpi"  />
+          <icon src="res/icon/android/icon-72-hdpi.png"  density="hdpi"  />
+          <icon src="res/icon/android/icon-96-xhdpi.png" density="xhdpi" />
+    </platform>
+          <icon src="res/icon/android/icon-36-ldpi.png" density="ldpi"   gap:platform="android"    gap:qualifier="ldpi" />
+          <icon src="res/icon/android/icon-48-mdpi.png" density="mdpi"   gap:platform="android"    gap:qualifier="mdpi" />
+          <icon src="res/icon/android/icon-72-hdpi.png" density="hdpi"   gap:platform="android"    gap:qualifier="hdpi" />
+          <icon src="res/icon/android/icon-96-xhdpi.png" density="xhdpi" gap:platform="android"    gap:qualifier="xhdpi"/>
+
+<!-- Define app splash screens in Cordova markup -->
+    <platform name="ios">
+        <splash src="res/splash/ios/Default~iphone.png"         width="320" height="480"/>
+        <splash src="res/splash/ios/Default@2x~iphone.png"      width="640" height="960"/>
+        <splash src="res/splash/ios/Default-Portrait~ipad.png"  width="768" height="1024"/>
+        <splash src="res/splash/ios/Default-Portrait@2x~ipad.png"  width="1536" height="2048"/>
+        <splash src="res/splash/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+        <splash src="res/splash/ios/Default-667h.png"           width="750" height="1334"/>
+        <splash src="res/splash/ios/Default-736h.png"           width="1242" height="2208"/>
+    </platform>
+    <platform name="android">
+        <splash src="res/splash/android/splash-port-ldpi.png"  density="port-ldpi"  />
+        <splash src="res/splash/android/splash-port-mdpi.png"  density="port-mdpi"  />
+        <splash src="res/splash/android/splash-port-hdpi.9.png"  density="port-hdpi"  />
+        <splash src="res/splash/android/splash-port-xhdpi.9.png" density="port-xhdpi" />
+    </platform>
+<!-- Define app splash screens in Phonegap Build markup -->
+    <gap:splash src="res/splash/android/splash-port-ldpi.png"    gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="res/splash/android/splash-port-mdpi.png"    gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="res/splash/android/splash-port-hdpi.9.png"    gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="res/splash/android/splash-port-xhdpi.9.png"   gap:platform="android" gap:density="xhdpi" />
+    <gap:splash src="res/splash/ios/Default~iphone.png"          gap:platform="ios"     width="320" height="480" />
+    <gap:splash src="res/splash/ios/Default@2x~iphone.png"       gap:platform="ios"     width="640" height="960" />
+    <gap:splash src="res/splash/ios/Default-Portrait~ipad.png"   gap:platform="ios"     width="768" height="1024" />
+    <gap:splash src="res/splash/ios/Default-Portrait@2x~ipad.png"  gap:platform="ios"   width="1536" height="2048"/>
+    <gap:splash src="res/splash/ios/Default-568h@2x~iphone.png"  gap:platform="ios"     width="640" height="1136" />
+    <gap:splash src="res/splash/ios/Default-667h.png"            gap:platform="ios"     width="1334" height="1334" />
+    <gap:splash src="res/splash/ios/Default-736h.png"            gap:platform="ios"     width="2208" height="2208" />
+
+
+</widget>
